@@ -20,8 +20,14 @@ function onTextData(e) {
 
 function onFormSubmit(e) {
 
-    e.preventDefault();
-    console.log(objectStorage);
+  e.preventDefault();
+
+  const formElem = e.currentTarget.elements;
+  
+      if (formElem.email.value !== '' && formElem.message.value !== '') {
+        console.log(objectStorage);
+    }
+    
     localStorage.removeItem(STORAGE_KEY);
     e.currentTarget.reset();
 }
@@ -66,56 +72,6 @@ function populateText() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        //    test.email.value = email;
-//    test.message.value = message;
-//     objectStorage.email = email;
-//     objectStorage.message = message;
-
-
-        // test.forEach(function (e) {
-        
-     
-        //     e.value = localStorage.getItem(e.name, e.value);
-       
-        //     e.addEventListener('input', function () {
-           
-        //         localStorage.setItem(e.name, e.value);
-        //     })
-        // })
-
-
-
-        //        const savedData = localStorage.getItem(STORAGE_KEY);
-        // if (savedData) {
-
-        //     const {name, email} = JSON.parse(savedData);
-        
-        //       formElem.name.value = name;
-        //         formElem.email.value = email;
-        //         objectStorage.name = name;
-        //         objectStorage.email = email;
-        //     }
-        //   console.log(textData);
-        // inputElem.target.name.value = textData.email;
-        // textArea.target.name.value = textData.message;
-      
-    
 
 
 
