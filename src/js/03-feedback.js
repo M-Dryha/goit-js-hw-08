@@ -22,9 +22,9 @@ function onFormSubmit(e) {
 
   e.preventDefault();
 
-  const formElem = e.currentTarget.elements;
+  const formElemData = e.currentTarget.elements;
   
-      if (formElem.email.value !== '' && formElem.message.value !== '') {
+      if (formElemData.email.value !== '' && formElemData.message.value !== '') {
         console.log(objectStorage);
     }
     
