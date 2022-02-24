@@ -26,10 +26,13 @@ function onFormSubmit(e) {
   
       if (formElemData.email.value !== '' && formElemData.message.value !== '') {
         console.log(objectStorage);
+        localStorage.removeItem(STORAGE_KEY);
+        e.currentTarget.reset();
     }
-    
-    localStorage.removeItem(STORAGE_KEY);
-    e.currentTarget.reset();
+      else {
+        alert("Не все поля заполнены!");
+    }
+   
 }
 
 
